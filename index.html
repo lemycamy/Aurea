@@ -47,42 +47,21 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
         }
-        /* Hidden checkbox for controlling the accordion */
-        #menu-toggle {
-            display: none;
-        }
-        /* Styling for the menu label (hamburger icon) */
-        .menu-label {
-            display: none; /* Hide on larger screens */
-            cursor: pointer;
-            font-size: 2rem;
-            user-select: none;
-        }
+        
          /* Accordion style for smaller screens */
 @media (max-width: 768px) {
     /* Hide menu by default */
-    nav ul {
-        display: hidden; /* This ensures the menu is hidden by default */
+    nav ul {
         flex-direction: column;
         align-items: center;
         background-color: #e94c4b;
         width: 100%;
-        position: absolute;
+        position: relative;
         top: 100%; /* Stick it right below the header */
         left: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-     /* Show menu when checkbox is checked */
-     #menu-toggle:checked + .menu-label + nav ul {
-        display: flex; /* This will display the menu when the checkbox is checked */
-    }
-    /* Menu-toggle button (hamburger) */
-    .menu-label {
-        display: block; /* Show the hamburger icon on smaller screens */
-        text-align: center;
-        background-color: #e94c4b;
-        padding: 1rem;
-    }
+    
     /* Individual menu items */
     nav ul li {
         margin: 1rem 0; /* Space between items */
@@ -195,10 +174,7 @@
 <body>
     <header>
         <h1>AUREA PAX</h1>
-        <label for="menu-toggle" class="menu-label">Menu</label>
-        <!-- Hidden checkbox to control the accordion -->
-        <input type="checkbox" id="menu-toggle" >
-        <!-- Label for the checkbox (hamburger icon) -->
+       
     
         <nav>
             <ul>
