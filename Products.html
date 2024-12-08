@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurea Pax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+         .bodoni-moda-<uniquifier> {
+         font-family: "Bodoni Moda", serif;
+         font-optical-sizing: auto;
+         font-weight: <weight>;
+         font-style: normal;
+            }
+        .roboto-condensed-<uniquifier> {
+        font-family: "Roboto Condensed", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+}
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+            background-color: #f8f8f8;
+            max-width: 100%;
+        }
+        header {
+            background-color: #e94c4b;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Bodoni Moda", serif;
+            color: #fac85d;
+        }
+
+        header img {
+            height: 120px ;
+            width: 120px ;
+            padding-left: ;
+        }
+        
+         /* Accordion style for smaller screens */
+@media (max-width: 768px) {
+
+    header { position : relative}
+    /* Hide menu by default */
+    nav ul {
+
+        flex-direction: column;
+        align-items: center;
+        background-color: #e94c4b;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Individual menu items */
+    nav ul li {
+        margin: 1rem 0; /* Space between items */
+    }
+    nav ul li a {
+        font-size: 1.5rem; /* Make the links more readable on mobile */
+    }
+}
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Bodoni Moda", serif;
+            color: #fac85d;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            transition: all .5s ease;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fffdfd;
+            padding: 1rem;
+}
+        nav ul li:hover {
+    transform: translate3D(0,-1px,0) scale(1.20); }
+    .hero {
+    position: relative;
+    height: 100vh; /* Make the hero section take up the full height of the viewport */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent video overflow */
+    color: white;
+}
+
+/* Video Styling - Hidden on mobile */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    object-position: center center; /* Centers the video */
+    z-index: -1; /* Sends video behind the content */
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    text-align: center;
+    padding: 2rem;
+    display: none;
+}
+
+/* Title and Text */
+.hero-content h1 {
+    font-size: 4rem;
+    font-family: "Roboto Condensed", sans-serif;
+    
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-family: "Roboto Condensed", sans-serif;
+   
+}
+
+/* Button Styling */
+.cta-button {
+    background-color: #fc1414;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #c73a3a;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Hide the video on mobile */
+    .hero-video {
+        display: none;
+    }
+
+    /* Change the background color to red and show the content */
+    .hero {
+        background-color: #e94c4b; /* Red background */
+        height: auto; /* Adjust height for mobile */
+        padding: 2rem 0;
+    }
+
+    /* Ensure the hero content is visible and adjusted on mobile */
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+        text-align: center;
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Adjust button font size */
+    }
+}
+        .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 1rem; /* Space between the cards */
+    margin: 2rem 0;
+}
+.main-content .card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Cards will take up full width of their grid cell */
+    transition: all .5s ease;
+}
+
+
+.card:hover {
+    transform: translate3D(0,-1px,0) scale(1.06); }
+        .main-content .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .main-content .card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .main-content .card p {
+            font-size: 1rem;
+            color: #777;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .product-card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    margin: 1rem auto;
+    width: 90%;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.product-card .button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e94c4b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .button:hover {
+    background-color: #d43c3b;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Show the modal when the anchor is targeted */
+.modal:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styling */
+.open-modal {
+    background-color: #e94c4b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.open-modal:hover {
+    background-color: #c73a3a;
+}
+
+/* General Section Styling */
+.reviews-section {
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f9fbfe;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 95%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.reviews-header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.google-logo {
+    width: 25px;
+    margin-right: 0.5rem;
+}
+
+.reviews-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.leave-review {
+    background-color: #e94c4b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.leave-review:hover {
+    background-color: #fc3131;
+}
+
+/* Grid Layout for Reviews */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* Individual Review Cards */
+.review-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.review-meta h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.review-meta p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.stars {
+    margin-left: auto;
+    color: #f4c518;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.tags {
+    margin-top: 0.5rem;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #eef3fb;
+    color: #4c8bf5;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Visual-Content/AUREA.png">
+       
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+                <li><a href="Faqs.html">FaQs</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Preorder.html">Pre-Order</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Visual-Content/aureaprod.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h2>Our Products</h2>
+            <p>Explore our exquisite range of handmade products with detailed descriptions and features.</p>
+            <a href="Preorder.html" class="cta-button">Pre-Order Now</a>
+        </div>
+    
+    </section>
+<br>
+    <h1 style="text-align: center; font-size: 3rem;">PRODUCTS</h1>
+
+    <main class="main-content">
+        <div class="product-card">
+            <img src="visual-content/image1.jpg" alt="Traditional Japanese Kanzashi Stick">
+            <h3>Traditional Japanese Kanzashi Stick</h3>
+            <p>Handcrafted with intricate detailing, these sticks bring elegance to your hairdo.</p>
+            <a href="#modal1" class="open-modal">Learn More</a>
+        
+            <!-- Modal -->
+            <div class="modal" id="modal1">
+                <div class="modal-content">
+                    <a href="#" class="close-modal">&times;</a>
+                    <h2>Traditional Japanese Kanzashi Stick</h2>
+                    <p>This hair accessory is handcrafted with intricate designs. Perfect for any occasion.</p>
+                    <ul>
+        
+                        <li>Material: High-quality wood</li>
+                        <li>Dimensions: 10cm x 2cm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="visual-content/image1.jpg" alt="Modern Japanese Hairclip">
+            <h3>Modern Japanese Hairclip</h3>
+            <p>A contemporary take on classic designs, perfect for daily use or special occasions.</p>
+            <a href="#modal2" class="open-modal">Learn More</a>
+
+            <!-- Modal -->
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+                    <a href="#close" class="close-modal">&times;</a>
+                    <h2>Modern Japanese Hairclip</h2>
+                    <p>This hairclip is inspired by modern Japanese designs, featuring a minimalist color and slicker design. Perfect for both casual and formal wear.</p>
+                    <ul>
+                        
+                        <li>Material: High-quality resin</li>
+                        <li>Dimensions: 3cm x 5cm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="visual-content/image1.jpg" alt="TJK 2">
+            <h3>TJK 2</h3>
+            <p>Simple yet stylish, this hair accessory is a must-have for any wardrobe.</p>
+            <a href="#modal3" class="open-modal">Learn More</a>
+
+            <!-- Modal -->
+            <div class="modal" id="modal3">
+                <div class="modal-content">
+                    <a href="#close" class="close-modal">&times;</a>
+                    <h2>Traditional japanese kanzashi 2</h2>
+                    <p>A Second variation of Traditional japanese kanzashi, featuring a vibrant colors. Perfect for casual wear.</p>
+                    <ul>
+                        
+                        <li>Material: High-quality resin</li>
+                        <li>Dimensions: 10cm x 5cm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="visual-content/image1.jpg" alt="Modern Japanese Hairclip">
+            <h3>TJK 3</h3>
+            <p>A Third variation of Traditional japanese Kanzashi, perfect for daily use or special occasions.</p>
+            <a href="#modal4" class="open-modal">Learn More</a>
+
+            <!-- Modal -->
+            <div class="modal" id="modal4">
+                <div class="modal-content">
+                    <a href="#close" class="close-modal">&times;</a>
+                    <h2>Traditional japanese kanzashi 3</h2>
+                    <p>This hairclip is inspired by modern Japanese designs, featuring floral patterns and vibrant colors. Perfect for both casual and formal wear.</p>
+                    <ul>
+                       
+                        <li>Material: High-quality resin</li>
+                        <li>Dimensions: 10cm x 5cm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="visual-content/image1.jpg" alt="TJK 2">
+            <h3>Modern Hairclip floral</h3>
+            <p>Simple yet stylish, this hair accessory is a must-have for any wardrobe.</p>
+            <a href="#modal5" class="open-modal">Learn More</a>
+
+            <!-- Modal -->
+            <div class="modal" id="modal5">
+                <div class="modal-content">
+                    <a href="#close" class="close-modal">&times;</a>
+                    <h2>Modern Hairclip floral </h2>
+                    <p>This hairclip is inspired by modern Japanese designs, featuring floral patterns and vibrant colors. Perfect for both casual and formal wear.</p>
+                    <ul>
+                        
+                        <li>Material: High-quality resin</li>
+                        <li>Dimensions: 3cm x 5cm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <br><BR><BR>  <br><BR>
+        <h1 style="text-align: center; font-size: 3rem;">REVIEWS</h1>
+        <br>
+
+            <section class="reviews-section">
+                <div class="reviews-header">
+                    <h2> Reviews</h2>
+                    <p>4.9 ★★★★★ <span>(1,834 reviews)</span></p>
+                    <button class="leave-review">Leave a Review</button>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://via.placeholder.com/50" alt="User" class="user-avatar">
+                            <div class="review-meta">
+                                <h3>Elaiza</h3>
+                                <p>3 hours ago</p>
+                            </div>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p class="review-text">
+                            Ganda ng Product. kahit pre order lang, ung date talaga na sinabi nila nag arrive!.
+                        </p>
+                        <div class="tags">
+                            <span>English</span>
+                            <span>Positive</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://via.placeholder.com/50" alt="User" class="user-avatar">
+                            <div class="review-meta">
+                                <h3>XxHuntressxX</h3>
+                                <p>1 day ago</p>
+                            </div>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p class="review-text">
+                        Ganda, ung product authentic feel talaga. bagay sa japanese themed outfit ko napaka mura para sa quality.
+                        </p>
+                        <div class="tags">
+                            <span>English</span>
+                            <span>Positive</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://via.placeholder.com/50" alt="User" class="user-avatar">
+                            <div class="review-meta">
+                                <h3>Gwenneth</h3>
+                                <p>17 hours ago</p>
+                            </div>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p class="review-text">
+                            Nakita ko lang sa ads, tinry ko true to date nag arrive sa pre order nila tas apaka mura pa, super worth it.
+                        </p>
+                        <div class="tags">
+                            <span>English</span>
+                            <span>Positive</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://via.placeholder.com/50" alt="User" class="user-avatar">
+                            <div class="review-meta">
+                                <h3>Camille</h3>
+                                <p>9 hours ago</p>
+                            </div>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p class="review-text">
+                           nakita ko sha gamit ni liza soberano, ang ganda kaya na curious at binili ko na, worth the hype!!.
+                        </p>
+                        <div class="tags">
+                            <span>English</span>
+                            <span>Positive</span>
+                        </div>
+                    </div>
+                    <!-- Add more review-card elements for additional reviews -->
+                </div>
+            </section>
+
+    
+        <footer>
+
+        <ul>
+            <li><a href="#">UI design</a></li>
+            <li><a href="#">Prototyping</a></li>
+            <li><a href="#">Development features</a></li>
+            <li><a href="#">Design systems</a></li>
+        </ul>
+        <p>&copy; 2024 Aurea Pax</p>
+    </footer>
+</body>
+</html> 
