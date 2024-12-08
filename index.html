@@ -47,6 +47,20 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
         }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Bodoni Moda", serif;
+            color: #fac85d;
+        }
+
+        header img {
+            height: 120px ;
+            width: 120px ;
+            padding-left: ;
+        }
+
         
          /* Accordion style for smaller screens */
 @media (max-width: 768px) {
@@ -100,7 +114,7 @@
         nav ul li:hover {
     transform: translate3D(0,-1px,0) scale(1.20); }
         .hero {
-            background-image: url(Untitled\ design.jpg);
+            background-image: url(Visual-Content/Untitled\ design.jpg);
             background-size: cover;
             background-position: center;
             height: 500px;
@@ -138,7 +152,7 @@
     transform: translate3D(0,-1px,0) scale(1.06); }
         .main-content .card img {
             width: 100%;
-            height: 150px;
+            height: 400px;
             object-fit: cover;
             margin-bottom: 1rem;
         }
@@ -169,21 +183,111 @@
             text-decoration: none;
             font-size: 0.9rem;
         }
+
+        .card3 {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Cards will take up full width of their grid cell */
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+.card p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+
+.card-image3 {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 20px;
+    width: 60%;
+    text-align: left;
+    
+    
+}
+
+.card-text h2 {
+    margin-left: 20px;
+    font-size: 3rem;
+    color: #333;
+}
+
+.card-text p {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #666;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    .card3 {
+        flex-direction: column; /* Stack image and text */
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr; /* 4 columns */
+        flex-direction: column; /* Stack image and text */
+    }
+    .main-content .card {
+        display: grid;
+        flex-direction: column; /* Stack image and text */
+    }
+    
+
+    .card-image {
+        width: 100%; /* Make the image full width */
+    }
+
+    .card-text {
+        width: 100%; /* Text also takes full width */
+    
+    }
+
+    .card-text h2 {
+    font-size: 2rem;
+    
+   }
+
+   .card-text p {
+    font-size: 1rem;
+    
+    }
+}
       
     </style>
 </head>
 <body>
     <header>
-        <h1>AUREA PAX</h1>
+        <img src="Visual-Content/AUREA.png">
        
     
         <nav>
             <ul>
-                <li><a href="SUB-PAGES/AboutUs.html">About Us</a></li>
-                <li><a href="#">Contact-us</a></li>
-                <li><a href="#">FaQs</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+                <li><a href="Faqs.html">FaQs</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="price.html">Pricing</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Pre-Order</a></li>
              
@@ -195,16 +299,28 @@
     </section>
     <section class="main-content">
     <div class="card" style="padding: 20px;">
-        <img src="red.jpg" alt="Image">
-        <h3>MISSION</h3>
-        <p style="font-size: 20px;">Our mission is to celebrate the harmony between tradition and innovation by offering exquisitely crafted Japanese-themed hair accessories. We aim to preserve the timeless beauty of traditional Japanese design while infusing it with modern aesthetics, providing our customers with elegant pieces that honor cultural heritage and offer a unique expression of personal style. Through our products, we seek to bring a sense of serenity and grace to everyday life, promoting a deep appreciation for the artistry and craftsmanship of Japanese culture.</p>
+        <img src="Visual-Content/image1.jpg" alt="Image">
+        <h3>Traditional kanzashi</h3>
+        <p style="font-size: 20px;"></p>
     </div>
     <div class="card" style="padding: 20px;">
-        <img src="blue.jpg" alt="Image">
-        <h3>VISION</h3>
-        <p style="font-size: 20px;">Aurea Pax aspires to become a leading brand in the global market for Japanese-inspired hair accessories, recognized for our commitment to quality, authenticity, and innovation. We aspire to bridge the gap between the past and the present, creating accessories that resonate with customers who value tradition and seek to express their individuality. By fostering a connection to the rich cultural heritage of Japan, we aim to inspire a deeper appreciation for traditional arts while embracing contemporary design, ultimately creating timeless pieces that transcend trends and bring lasting beauty and elegance to our customers.</p>
+        <img src="Visual-Content/image1.jpg" alt="Image" >
+        <h3>Modern hairpin</h3>
+        <p style="font-size: 20px;"></p>
     </div>
 </section>
+<marquee scrollamount="15">philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </marquee>
+<h1 style="text-align: center; font-size: 4rem;">News</h1>
+<div class="card3" style="padding: 20px;">
+
+    <img src="Visual-Content/AUREA.png" alt="Card Image" class="card-image">
+        <div class="card-text">
+            <h2>Popular Celebrity from the philippines commends Aurea Pax for its visions.</h2>
+            <p>"i like their idea of bringing a foreign product thats authentic into our country while maintaining its cheapness ". </p>
+        </div>
+
+
+</div>
     <footer>
         <ul>
             <li><a href="#">UI design</a></li>
