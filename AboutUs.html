@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurea Pax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+         .bodoni-moda-<uniquifier> {
+         font-family: "Bodoni Moda", serif;
+         font-optical-sizing: auto;
+         font-weight: <weight>;
+         font-style: normal;
+            }
+        .roboto-condensed-<uniquifier> {
+        font-family: "Roboto Condensed", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+}
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+            background-color: #f8f8f8;
+            max-width: 100%;
+        }
+        header {
+            background-color: #e94c4b;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header img {
+            height: 120px ;
+            width: 120px ;
+            padding-left: ;
+        }
+
+        @media (max-width: 768px) {
+
+header { position : relative}
+/* Hide menu by default */
+nav ul {
+
+    flex-direction: column;
+    align-items: center;
+    background-color: #e94c4b;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual menu items */
+nav ul li {
+    margin: 1rem 0; /* Space between items */
+}
+nav ul li a {
+    font-size: 1.5rem; /* Make the links more readable on mobile */
+}
+}
+      
+       
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Bodoni Moda", serif;
+            color: #fac85d;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            transition: all .5s ease;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fffdfd;
+            padding: 1rem;
+}
+        nav ul li:hover {
+    transform: translate3D(0,-1px,0) scale(1.20); }
+        .hero {
+            background-image: url(Visual-Content/Untitled\ design.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            padding: 3rem;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            color: #fac85d;
+            font-family: "Bodoni Moda", serif;
+            border: solid 1px black;
+            opacity: 80%;
+            background-color: #333;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 1rem; /* Space between the cards */
+    margin: 2rem 0;
+}
+.main-content .card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Cards will take up full width of their grid cell */
+    transition: all .5s ease;
+}
+
+.main-content .card1 {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Cards will take up full width of their grid cell */
+    transition: all .5s ease;
+    text-align: justify;
+}
+
+
+.card:hover {
+    transform: translate3D(0,-1px,0) scale(1.06); }
+        .main-content .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .main-content .card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .main-content .card p {
+            font-size: 1rem;
+            color: #777;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+      
+    
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Visual-Content/AUREA.png">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+                <li><a href="Faqs.html">FaQs</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Pre-Order</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+    
+    </section>
+    <br><br>
+  <div class="card1" style="padding: 20px;">
+<center><h1>ABOUT US</h1>
+    <br>
+    <p style="font-size: 20px; text-align: justify;"> 
+        We are a team of dedicated students from ACLC College of Manila, driven by our passion for creativity, cultural appreciation, and modern design. As aspiring professionals, we have come together to create Aurea Pax, a brand that embodies elegance, craftsmanship, and innovation. Through this project, we aim to celebrate the timeless beauty of traditional artistry while embracing the versatility of contemporary styles.  <br><br>
+        
+        Our journey at ACLC College has equipped us with the skills and knowledge to blend creativity with business principles, allowing us to bring unique products to life. With a deep appreciation for cultural heritage and modern aesthetics, we strive to offer hair accessories that symbolize harmony, individuality, and sophistication.  <br><br>
+        
+        Aurea Pax is not just a brand; it is a reflection of our dedication to excellence, teamwork, and innovation. By combining traditional values with modern techniques, we aim to provide our customers with high-quality products that resonate with meaning and style. <br><br>
+        
+        We aim to bring over Japanese based Hairclips or Kanzashi to philippines because of the lack of availability and convinience, we want our fellow filipino to be able to buy quality Kanzashi cheaply. </p> 
+</center>
+  </div>
+    <section class="main-content">
+        <div class="card" style="padding: 20px;">
+            <img src="Visual-Content/red.jpg" alt="Image">
+            <h3>MISSION</h3>
+            <p style="font-size: 20px;">Our mission is to celebrate the harmony between tradition and innovation by offering exquisitely crafted Japanese-themed hair accessories. We aim to preserve the timeless beauty of traditional Japanese design while infusing it with modern aesthetics, providing our customers in the philippines with elegant pieces that honor cultural heritage and offer a unique expression of personal style. Through our products, we seek to bring a sense of serenity and grace to everyday life, promoting a deep appreciation for the artistry and craftsmanship of Japanese culture.</p>
+        </div>
+        <div class="card" style="padding: 20px;">
+            <img src="Visual-Content/blue.jpg" alt="Image">
+            <h3>VISION</h3>
+            <p style="font-size: 20px;">Aurea Pax aspires to become a leading brand in the global market for Japanese-inspired hair accessories, recognized for our commitment to quality, authenticity, and innovation. We aspire to bridge the gap between the past and the present, creating accessories that resonate with customers who value tradition and seek to express their individuality. By fostering a connection to the rich cultural heritage of Japan, we aim to inspire a deeper appreciation for traditional arts while embracing contemporary design, ultimately creating timeless pieces that transcend trends and bring lasting beauty and elegance to our customers. </p>
+        </div>
+        
+</section>
+    <footer>
+        <ul>
+            <li><a href="#">UI design</a></li>
+            <li><a href="#">Prototyping</a></li>
+            <li><a href="#">Development features</a></li>
+            <li><a href="#">Design systems</a></li>
+        </ul>
+        <p>&copy; 2024 Aurea Pax</p>
+    </footer>
+</body>
+</html> 

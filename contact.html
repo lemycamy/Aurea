@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurea Pax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+         .bodoni-moda-<uniquifier> {
+         font-family: "Bodoni Moda", serif;
+         font-optical-sizing: auto;
+         font-weight: <weight>;
+         font-style: normal;
+            }
+        .roboto-condensed-<uniquifier> {
+        font-family: "Roboto Condensed", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+}
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+            background-color: #f8f8f8;
+            max-width: 100%;
+        }
+        header {
+            background-color: #e94c4b;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Bodoni Moda", serif;
+            color: #fac85d;
+        }
+
+        header img {
+            height: 120px ;
+            width: 120px ;
+            padding-left: ;
+        }
+        
+         /* Accordion style for smaller screens */
+@media (max-width: 768px) {
+
+    header { position : relative}
+    /* Hide menu by default */
+    nav ul {
+
+        flex-direction: column;
+        align-items: center;
+        background-color: #e94c4b;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Individual menu items */
+    nav ul li {
+        margin: 1rem 0; /* Space between items */
+    }
+    nav ul li a {
+        font-size: 1.5rem; /* Make the links more readable on mobile */
+    }
+}
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "Bodoni Moda", serif;
+            color: #fac85d;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            transition: all .5s ease;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fffdfd;
+            padding: 1rem;
+}
+        nav ul li:hover {
+    transform: translate3D(0,-1px,0) scale(1.20); }
+        .hero {
+            background-image: url(Visual-Content/Untitled\ design.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            padding: 3rem;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            color: #fac85d;
+            font-family: "Bodoni Moda", serif;
+            border: solid 1px black;
+            opacity: 80%;
+            background-color: #333;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 1rem; /* Space between the cards */
+    margin: 2rem 0;
+}
+.main-content .card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Cards will take up full width of their grid cell */
+    transition: all .5s ease;
+}
+.card:hover {
+    transform: translate3D(0,-1px,0) scale(1.06); }
+        .main-content .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .main-content .card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .main-content .card p {
+            font-size: 1rem;
+            color: #777;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .info {
+            flex: 1;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #e94c4b;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+             box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  transition: all .5s ease; /* back to normal */
+        }
+        
+        .info:hover {
+            transform: translate3D(0,-1px,0) scale(1.07);
+        }
+
+        .info h2 {
+            margin-top: 0;
+            color: #ffe600;
+        }
+
+        .info p {
+            margin: 10px 0;
+            color: #ffffff;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Visual-Content/AUREA.png">
+       
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact-us</a></li>
+                <li><a href="Faqs.html">FaQs</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Pre-Order</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+    
+    </section><br><br><hr><br><br>
+    <div class="container">
+        <div class="contact-info">
+            <div class="info">
+                <h2><i class="bx bxs-map" ></i>&nbsp Location</h2>
+                <p><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.957209792826!2d120.99085887590424!3d14.601513477052706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9fbd63c214f%3A0x8d77a4a63e9489e2!2sACLC%20College!5e0!3m2!1sen!2sph!4v1733444687946!5m2!1sen!2sph" style="text-decoration: none; color: #ffffff; font: Roboto condensed">2nd Flr. 2355 Legarda,</a></p>
+                <p><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.957209792826!2d120.99085887590424!3d14.601513477052706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9fbd63c214f%3A0x8d77a4a63e9489e2!2sACLC%20College!5e0!3m2!1sen!2sph!4v1733444687946!5m2!1sen!2sph" style="text-decoration: none; color: #ffffff; font: Roboto condensed"> cor Manrique, Sampaloc,</a></p>
+                <p><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.957209792826!2d120.99085887590424!3d14.601513477052706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9fbd63c214f%3A0x8d77a4a63e9489e2!2sACLC%20College!5e0!3m2!1sen!2sph!4v1733444687946!5m2!1sen!2sph" style="text-decoration: none; color: #ffffff; font: Roboto condensed"> Manila, 1015 Metro Manila</a></p>
+                
+                
+                
+            </div>
+            <div class="info">
+                <h2><i class="bx bxs-phone" style="font-family: sans-serif"></i>&nbsp Phone</h2>
+                <p><a href="tel:+639453746617" class="contact-number" style="text-decoration: none; color: #ffffff; font: Roboto condensed"> +63 945 899 5462 </a></p>
+            </div>
+            <div class="info">
+                <h2><i class="fa fa-facebook"></i>&nbsp&nbsp Facebook</h2>
+                <p><a href="#" target="_blank" style="text-decoration: none; color: #ffffff; font: Roboto condensed">AureaGG</a></p>
+            </div>
+            <div class="info">
+                <h2><i class="fa fa-facebook"></i>&nbsp&nbsp Gmail</h2>
+                <p><a href="#" target="_blank" style="text-decoration: none; color: #ffffff; font: Roboto condensed">AureaGG@Gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#">UI design</a></li>
+            <li><a href="#">Prototyping</a></li>
+            <li><a href="#">Development features</a></li>
+            <li><a href="#">Design systems</a></li>
+        </ul>
+        <p>&copy; 2024 Aurea Pax</p>
+    </footer>
+</body>
+</html> 
