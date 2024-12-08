@@ -16,6 +16,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {scroll-behavior: smooth;}
          .bodoni-moda-<uniquifier> {
          font-family: "Bodoni Moda", serif;
          font-optical-sizing: auto;
@@ -32,6 +34,7 @@
             font-family: "Roboto Condensed", sans-serif;
             background-color: #f8f8f8;
             max-width: 100%;
+            
         }
         header {
             background-color: #e94c4b;
@@ -113,32 +116,103 @@
 }
         nav ul li:hover {
     transform: translate3D(0,-1px,0) scale(1.20); }
-        .hero {
-            background-image: url(Visual-Content/Untitled\ design.jpg);
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            padding: 3rem;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            color: #fac85d;
-            font-family: "Bodoni Moda", serif;
-            border: solid 1px black;
-            opacity: 80%;
-            background-color: #333;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-        .main-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    gap: 1rem; /* Space between the cards */
-    margin: 2rem 0;
+    .hero {
+    position: relative;
+    height: 100vh; /* Make the hero section take up the full height of the viewport */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent video overflow */
+    color: white;
+}
+
+/* Video Styling - Hidden on mobile */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    object-position: center center; /* Centers the video */
+    z-index: -1; /* Sends video behind the content */
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    text-align: center;
+    padding: 2rem;
+    display: none;
+}
+
+/* Title and Text */
+.hero-content h1 {
+    font-size: 4rem;
+    font-family: "Roboto Condensed", sans-serif;
+    
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-family: "Roboto Condensed", sans-serif;
+   
+}
+
+/* Button Styling */
+.cta-button {
+    background-color: #fc1414;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #c73a3a;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Hide the video on mobile */
+    .hero-video {
+        display: none;
+    }
+
+    /* Change the background color to red and show the content */
+    .hero {
+        background-color: #e94c4b; /* Red background */
+        height: auto; /* Adjust height for mobile */
+        padding: 2rem 0;
+    }
+
+    /* Ensure the hero content is visible and adjusted on mobile */
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+        text-align: center;
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Adjust button font size */
+    }
 }
 .main-content .card {
     background-color: #fff;
@@ -288,14 +362,22 @@
                 <li><a href="Faqs.html">FaQs</a></li>
                 <li><a href="location.html">Location</a></li>
                 <li><a href="price.html">Pricing</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Pre-Order</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Preorder.html">Pre-Order</a></li>
              
             </ul>
         </nav>
     </header>
     <section class="hero">
-    
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Visual-Content/AUREAvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Our Store</h1>
+            <p>Discover beautiful, handcrafted Japanese hair accessories.</p>
+            <a href="Preorder.html" class="cta-button">Pre-Order Now</a>
+        </div>
     </section>
     <section class="main-content">
     <div class="card" style="padding: 20px;">
@@ -309,6 +391,7 @@
         <p style="font-size: 20px;"></p>
     </div>
 </section>
+<br><Br>
 <marquee scrollamount="15">philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;philippine Senator buys an Aurea Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liza Soberano encourages people on buying from Aurea!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </marquee>
 <h1 style="text-align: center; font-size: 4rem;">News</h1>
 <div class="card3" style="padding: 20px;">
